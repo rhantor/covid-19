@@ -1,0 +1,66 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.doc-icon {
+  padding: 2rem;
+}
+
+.doc-icon a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  background-color: #ddd;
+  padding: 1rem;
+  margin: 5px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  left: 0;
+  bottom: -52px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 10% 20px;
+}
+
+a i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 19px;
+  color: blue;
+}
+
+a:hover::after {
+  bottom: 0;
+  color: #fff;
+  z-index: -1;
+}
+
+a:hover i {
+  color: #fff;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=style.css.map */
